@@ -1,0 +1,402 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+/* Header and Navigation */
+header {
+    height: 90vh;
+    width: 100%;
+    background-color: black;
+    background-image: url('back.jpg');
+    background-repeat: no-repeat; /* Image repeat nahi hogi */
+    background-size: cover; /* Image ko screen size ke hisaab se fit karega */
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    background-color: black; /* Black background with opacity */
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px; /* Space between hero section and buttons */
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    position: relative;
+    width: 80%; /* Adjusted width for responsiveness */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+}
+
+.nav-img {
+    width: 160px;
+    height: 60px;
+}
+
+nav img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+nav button {
+    color: white;
+    padding: 7px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid white;
+    opacity: 1;
+}
+
+.nav-btn-1 {
+    background-color: transparent;
+}
+
+.nav-btn-2 {
+    background-color: red;
+}
+
+/* Hero Section */
+.hero {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 40vh;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    z-index: 10;
+}
+
+.hero > :nth-child(1) {
+    background-color: black;
+    font-size: 50px;
+    font-weight: bolder;
+    line-height: 1.2;
+    opacity: 1; /* Adjust line height */
+}
+
+.hero > :nth-child(2) {
+    font-size: 28px;
+}
+
+.hero > :nth-child(3) {
+    font-size: 24px;
+}
+
+/* Get Started Section */
+.get-start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 20px;
+}
+
+.get-start input {
+    border: 1px solid white;
+    background-color: transparent;
+    width: 270px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 4px;
+    padding-left: 11px;
+}
+
+.get-start button {
+    border: 1px solid white;
+    background-color: red;
+    width: 180px;
+    height: 37px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+    *{
+        max-width: 100%;
+    }
+    /* Header */
+    header {
+        max-width: 100%;
+        height: 70vh; /* Adjust header height for mobile */
+    }
+
+    .header {
+        max-width: 100%;
+        height: 70vh; /* Adjust header section height */
+    }
+
+    .hero {
+        height: 50vh; /* Adjust hero section height */
+    }
+
+    .hero > :nth-child(1) {
+        font-size: 35px; /* Smaller font size for mobile */
+    }
+
+    .hero > :nth-child(2) {
+        font-size: 22px; /* Smaller font size for mobile */
+    }
+
+    .hero > :nth-child(3) {
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+
+    /* Navigation */
+    nav {
+        width: 90%; /* More width for mobile */
+        flex-direction: column; /* Stack nav items vertically */
+        top: 10px; /* Adjust top for mobile */
+    }
+
+    .nav-img {
+        width: 120px; /* Smaller logo size for mobile */
+        height: 40px; /* Adjust logo height */
+    }
+
+    nav button {
+        padding: 5px 10px; /* Smaller padding for mobile */
+        margin-top: 10px; /* Add spacing between buttons */
+    }
+
+    /* Get Started Section */
+    .get-start {
+        flex-direction: column; /* Stack input and button vertically */
+        gap: 10px;
+    }
+
+    .get-start input {
+        width: 100%; /* Make the input full width */
+        height: 40px; /* Adjust height */
+    }
+
+    .get-start button {
+        width: 100%; /* Make the button full width */
+        height: 40px; /* Adjust height */
+        font-size: 18px; /* Smaller font size */
+    }
+}
+
+/* For Tablets and Medium Screens (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    /* Header */
+    header {
+        height: 80vh; /* Adjust header height for tablets */
+    }
+
+    .header {
+        height: 80vh; /* Adjust header section height */
+    }
+
+    .hero {
+        height: 50vh; /* Adjust hero section height */
+    }
+
+    .hero > :nth-child(1) {
+        font-size: 45px; /* Medium font size */
+    }
+
+    .hero > :nth-child(2) {
+        font-size: 26px; /* Medium font size */
+    }
+
+    .hero > :nth-child(3) {
+        font-size: 22px; /* Medium font size */
+    }
+
+    /* Navigation */
+    nav {
+        width: 85%; /* Adjust width for tablets */
+        flex-direction: row; /* Horizontal layout for nav items */
+    }
+
+    .nav-img {
+        width: 140px; /* Adjust logo size */
+        height: 50px; /* Adjust logo height */
+    }
+
+    nav button {
+        padding: 6px 12px; /* Adjust padding */
+    }
+
+    /* Get Started Section */
+    .get-start {
+        width: 80%;
+        gap: 15px;
+    }
+
+    .get-start input {
+        width: 250px; /* Adjust width */
+    }
+
+    .get-start button {
+        width: 160px; /* Adjust width */
+        font-size: 18px; /* Adjust font size */
+    }
+}
+.sep{
+    width: 100%;
+    height: 6px;
+    background-color:rgb(72, 72, 72);
+    z-index: 10;
+
+}
+.first {
+    display: flex;
+    justify-content: center;
+    max-width: 70vw;
+    margin: auto;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+.secImg {
+    position: relative;
+}
+
+.secImg img {
+    width: 555px;
+    position: relative;
+    /* z-index: 10; */
+}
+
+.secImg video {
+    position: relative;
+    /* top: 100px;
+    right: 0; */
+    width: 555px;
+}
+
+section.first>div {
+    display: flex;
+    flex-direction: column;
+    padding: 34px 0;
+}
+
+section.first>div :nth-child(1) {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+
+section.first>div :nth-child(2) {
+    font-size: 24px;
+
+}
+.q{
+    width: 100%;
+    height: 90vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 30px;
+}
+h1{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 50px;
+}
+.questions{
+    width: 60%;
+    height: 80px;
+    background-color: rgb(54, 54, 54);
+    /* color: white; */
+    display: flex;
+    align-items: center;
+    font-size:25px;
+    justify-content: space-between;
+    padding: 0 20px;
+    
+}
+.questions div{
+    background-color: rgb(54, 54, 54);
+}
+footer{
+    background-color: black;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.head{
+    width: 65%;
+    height: 9vh;
+    /* margin-bottom: 72px; */
+
+}
+.links{
+    /* background-color:goldenrod; */
+    width: 65%;
+    height: 31vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    text-decoration: underline;
+}
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    
+    .links{
+        grid-template-columns: 1fr 1fr;
+    }
+    footer{
+        max-width: 100%;
+    }
+    main{
+        max-width: 100%;
+    }
+    .q h1{
+        font-size: 40px;
+    }
+    .questions{
+        height: 90px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .first{
+        flex-direction: column;
+    }
+}
+*{
+    max-width: 100%;
+}
